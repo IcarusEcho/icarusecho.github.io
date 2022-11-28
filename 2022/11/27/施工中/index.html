@@ -24,7 +24,7 @@
 <meta property="og:description" content="博客搭建教程，还有一些 todo list">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-11-27T08:55:28.000Z">
-<meta property="article:modified_time" content="2022-11-28T05:44:35.376Z">
+<meta property="article:modified_time" content="2022-11-28T11:17:18.000Z">
 <meta property="article:author" content="Icarus">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -218,7 +218,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2k 字
+          2.1k 字
         
       </span>
     
@@ -273,8 +273,11 @@
               <div class="markdown-body">
                 
                 <h1 id="博客搭建"><a href="#博客搭建" class="headerlink" title="博客搭建"></a>博客搭建</h1><blockquote>
-<p>基于HEXO搭建博客，基于Github部署网页，基于Typora撰写文档</p>
-<p>下面是给自己的备忘录</p>
+<ul>
+<li>基于Hexo搭建博客</li>
+<li>基于Github部署网页</li>
+<li>基于Typora撰写文档</li>
+</ul>
 </blockquote>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
 <p>参考：</p>
@@ -292,7 +295,7 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm install -g hexo-cli<br></code></pre></td></tr></table></figure></li>
 <li><p>在自定义文件夹中建站，打开文件夹<code>cmd</code>执行命令：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sh">hexo init &lt;folder&gt;<br><span class="hljs-built_in">cd</span> &lt;folder&gt;<br>npm install<br></code></pre></td></tr></table></figure></li>
-<li><p>安装 Fluid 主题，和安装插件差不多，打开博客目录<code>cmd</code>执行命令：</p>
+<li><p>安装 Fluid 主题，和安装插件一样，打开博客目录<code>cmd</code>执行命令：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm install --save hexo-theme-fluid<br></code></pre></td></tr></table></figure>
 
 <p>在博客目录下创建 <code>_config.fluid.yml</code>，将主题的 <a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid/blob/master/_config.yml">_config.yml</a>内容复制过去。</p>
@@ -333,24 +336,26 @@
 <li><a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/start/#%E4%B8%BB%E9%A2%98%E7%AE%80%E4%BB%8B">Hexo Fluid用户手册</a></li>
 </ul>
 </blockquote>
-<ol>
-<li><p>草稿与发布</p>
-<p>打开博客目录<code>cmd</code>执行命令：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">hexo new draft <span class="hljs-string">&quot;title&quot;</span>		<span class="hljs-comment"># 新建草稿，标题有空格需要用双引号</span><br>hexo publish post <span class="hljs-string">&quot;title&quot;</span>	<span class="hljs-comment"># 把草稿发布，也可以直接新建发布</span><br></code></pre></td></tr></table></figure></li>
-<li><p>使用插件：</p>
-<ul>
+<h3 id="草稿与发布"><a href="#草稿与发布" class="headerlink" title="草稿与发布"></a>草稿与发布</h3><p>打开博客目录<code>cmd</code>执行命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">hexo new draft <span class="hljs-string">&quot;title&quot;</span>		<span class="hljs-comment"># 新建草稿，标题有空格需要用双引号</span><br>hexo publish post <span class="hljs-string">&quot;title&quot;</span>	<span class="hljs-comment"># 把草稿发布，也可以直接新建发布</span><br></code></pre></td></tr></table></figure>
+
+<p>默认不渲染换行，写Typora文档的时候要记得手动加<code>&lt;br&gt;</code></p>
+<h3 id="常用插件："><a href="#常用插件：" class="headerlink" title="常用插件："></a>常用插件：</h3><ul>
 <li><code>hexo-generator-index</code>：置顶文章的插件</li>
 <li><code>hexo-blog-encrypt</code>：加密文章的插件</li>
 </ul>
-</li>
-<li><p>对博客文档的一些常用字段：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">文章标题</span><br><span class="hljs-attr">excerpt:</span> <span class="hljs-string">摘要</span>			  	   <span class="hljs-comment"># 自动提取的摘要太丑了</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2019-10-10 10:00:00</span>	<span class="hljs-comment"># 调节文章发布时间</span><br><span class="hljs-attr">hide:</span> <span class="hljs-literal">true</span>					<span class="hljs-comment"># 隐藏文章，但访问链接还在</span><br><span class="hljs-attr">sticky:</span> <span class="hljs-number">100</span>					<span class="hljs-comment"># 置顶文章，需要插件</span><br><span class="hljs-attr">tag:</span>						<span class="hljs-comment"># tag是不分前后的</span><br>	<span class="hljs-bullet">-</span> <br>	<span class="hljs-bullet">-</span><br><span class="hljs-attr">category:</span>					<span class="hljs-comment"># category是分父子的</span><br>	<span class="hljs-bullet">-</span><br>	<span class="hljs-bullet">-</span><br><span class="hljs-attr">password:</span> <span class="hljs-string">&#x27;yes&#x27;</span>				<span class="hljs-comment"># 加密文章，需要插件</span><br><span class="hljs-attr">message:</span> <span class="hljs-string">是否成年？（yes/no）</span><br><span class="hljs-attr">abstract:</span> <span class="hljs-string">【年龄限制】</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure></li>
-<li><p>注意博客默认不渲染换行，要手动加<code>&lt;br&gt;</code></p>
-</li>
+<h3 id="常用字段："><a href="#常用字段：" class="headerlink" title="常用字段："></a>常用字段：</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">文章标题</span><br><span class="hljs-attr">excerpt:</span> <span class="hljs-string">摘要</span>			  	   <span class="hljs-comment"># 自动提取的摘要太丑了</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2019-10-10 10:00:00</span>	<span class="hljs-comment"># 调节文章发布时间</span><br><span class="hljs-attr">hide:</span> <span class="hljs-literal">true</span>					<span class="hljs-comment"># 隐藏文章，但访问链接还在</span><br><span class="hljs-attr">sticky:</span> <span class="hljs-number">100</span>					<span class="hljs-comment"># 置顶文章，需要插件</span><br><span class="hljs-attr">tag:</span>						<span class="hljs-comment"># tag是不分前后的</span><br>	<span class="hljs-bullet">-</span> <br>	<span class="hljs-bullet">-</span><br><span class="hljs-attr">category:</span>					<span class="hljs-comment"># category是分父子的</span><br>	<span class="hljs-bullet">-</span><br>	<span class="hljs-bullet">-</span><br><span class="hljs-attr">password:</span> <span class="hljs-string">&#x27;yes&#x27;</span>				<span class="hljs-comment"># 加密文章，需要插件</span><br><span class="hljs-attr">message:</span> <span class="hljs-string">是否成年？（yes/no）</span><br><span class="hljs-attr">abstract:</span> <span class="hljs-string">【年龄限制】</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="图片管理"><a href="#图片管理" class="headerlink" title="图片管理"></a>图片管理</h3><ol>
 <li><p>每个页面都可以在<code>_config.fluid.yml</code>中单独设置图片，相对路径是<code>source</code></p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">banner_img:</span> <span class="hljs-string">/img/bg/example.jpg</span><br></code></pre></td></tr></table></figure></li>
+<li><p>为了让Typora文档和网页都能显示图片而建立文件夹链接，打开<code>cmd</code>执行命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">mklink /j <span class="hljs-string">&quot;source/图片文件夹&quot;</span> <span class="hljs-string">&quot;_posts/图片文件夹&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>再设置Typora使得每次插入图片都复制到相应文件夹中，但是要记得删除图片相对路径一开始的那个点</p>
+</li>
 </ol>
-<h3 id="图片管理"><a href="#图片管理" class="headerlink" title="图片管理"></a>图片管理</h3><h3 id="字数统计"><a href="#字数统计" class="headerlink" title="字数统计"></a>字数统计</h3><p>因为博客加密和字数统计冲突了，修改一下源代码<code>node_modules\hexo-theme-fluid\scripts\helpers\wordcount.js</code>：</p>
+<h3 id="字数统计"><a href="#字数统计" class="headerlink" title="字数统计"></a>字数统计</h3><p>因为博客加密和字数统计冲突了，修改一下源代码<code>node_modules\hexo-theme-fluid\scripts\helpers\wordcount.js</code>：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> <span class="hljs-title function_">getWordCount</span> = (<span class="hljs-params">post</span>) =&gt; &#123;<br>  <span class="hljs-keyword">if</span> (!post.<span class="hljs-property">wordcount</span>) &#123;<br>    <span class="hljs-keyword">var</span> mytest = post.<span class="hljs-property">origin</span> ? post.<span class="hljs-property">origin</span> : post.<span class="hljs-property">content</span>;<br>    post.<span class="hljs-property">wordcount</span> = <span class="hljs-title function_">stripHTML</span>(mytest).<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/\r?\n|\r/g</span>, <span class="hljs-string">&#x27;&#x27;</span>).<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/\s+/g</span>, <span class="hljs-string">&#x27;&#x27;</span>).<span class="hljs-property">length</span>;<br>    <span class="hljs-comment">// post.wordcount = stripHTML(post.content).replace(/\r?\n|\r/g, &#x27;&#x27;).replace(/\s+/g, &#x27;&#x27;).length;</span><br>  &#125;<br>  <span class="hljs-keyword">return</span> post.<span class="hljs-property">wordcount</span>;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
 <h1 id="TO-DO"><a href="#TO-DO" class="headerlink" title="TO DO"></a>TO DO</h1><h2 id="网站相关"><a href="#网站相关" class="headerlink" title="网站相关"></a>网站相关</h2><ul>
@@ -430,6 +435,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2022/11/28/%E8%AE%AE%E9%95%BF%E8%AF%AD%E5%BD%95/" title="议长语录">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">议长语录</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
