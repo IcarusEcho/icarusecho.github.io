@@ -26,7 +26,7 @@
 <meta property="og:image" content="http://icarusecho.github.io/assets/%E9%BB%91%E6%9A%97%E6%97%B6%E4%BB%A3%C2%B7%E4%B8%8A.assets/screenshot-0-1.png">
 <meta property="og:image" content="http://icarusecho.github.io/assets/%E9%BB%91%E6%9A%97%E6%97%B6%E4%BB%A3%C2%B7%E4%B8%8A.assets/screenshot-0-2.png">
 <meta property="article:published_time" content="2022-11-26T09:51:41.000Z">
-<meta property="article:modified_time" content="2022-11-27T03:44:47.000Z">
+<meta property="article:modified_time" content="2022-11-28T15:14:31.000Z">
 <meta property="article:author" content="Icarus">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://icarusecho.github.io/assets/%E9%BB%91%E6%9A%97%E6%97%B6%E4%BB%A3%C2%B7%E4%B8%8A.assets/screenshot-0-1.png">
@@ -504,13 +504,6 @@
   <a href="/categories/%E5%8E%9F%E4%BD%9C/" class="category-chain-item">原作</a>
   
   
-    <span>></span>
-    
-  <a href="/categories/%E5%8E%9F%E4%BD%9C/%E4%B8%BB%E7%BA%BF/" class="category-chain-item">主线</a>
-  
-  
-
-  
 
       </span>
     
@@ -569,32 +562,37 @@
 
 
               
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/2022/11/27/%E6%96%BD%E5%B7%A5%E4%B8%AD/" title="施工中">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">施工中</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2022/10/22/%E5%8F%88%E6%98%AF%E8%A7%A6%E6%89%8Bpwp/" title="又是触手pwp">
-                        <span class="hidden-mobile">又是触手pwp</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
             </div>
 
             
+  <article id="comments" lazyload>
+    
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"RECWjXaEIDycndfghlWC5x79-gzGzoHsz","appKey":"F2j9kQ3qWRtJigyTubVkRjRy","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
           </article>
         </div>
       </div>
