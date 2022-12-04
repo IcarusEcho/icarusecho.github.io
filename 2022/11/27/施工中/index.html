@@ -24,7 +24,7 @@
 <meta property="og:description" content="博客搭建教程，还有一些 todo list">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-11-27T08:55:28.000Z">
-<meta property="article:modified_time" content="2022-12-04T03:29:19.000Z">
+<meta property="article:modified_time" content="2022-12-04T14:48:31.000Z">
 <meta property="article:author" content="Icarus">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -386,21 +386,18 @@
 <h3 id="字数统计"><a href="#字数统计" class="headerlink" title="字数统计"></a>字数统计</h3><p>因为博客加密和字数统计冲突了，修改一下源代码<code>node_modules\hexo-theme-fluid\scripts\helpers\wordcount.js</code>：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> <span class="hljs-title function_">getWordCount</span> = (<span class="hljs-params">post</span>) =&gt; &#123;<br>  <span class="hljs-keyword">if</span> (!post.<span class="hljs-property">wordcount</span>) &#123;<br>    <span class="hljs-keyword">var</span> mytest = post.<span class="hljs-property">origin</span> ? post.<span class="hljs-property">origin</span> : post.<span class="hljs-property">content</span>;<br>    post.<span class="hljs-property">wordcount</span> = <span class="hljs-title function_">stripHTML</span>(mytest).<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/\r?\n|\r/g</span>, <span class="hljs-string">&#x27;&#x27;</span>).<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/\s+/g</span>, <span class="hljs-string">&#x27;&#x27;</span>).<span class="hljs-property">length</span>;<br>    <span class="hljs-comment">// post.wordcount = stripHTML(post.content).replace(/\r?\n|\r/g, &#x27;&#x27;).replace(/\s+/g, &#x27;&#x27;).length;</span><br>  &#125;<br>  <span class="hljs-keyword">return</span> post.<span class="hljs-property">wordcount</span>;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
-<h1 id="TO-DO"><a href="#TO-DO" class="headerlink" title="TO DO"></a>TO DO</h1><h2 id="网站相关"><a href="#网站相关" class="headerlink" title="网站相关"></a>网站相关</h2><ul>
-<li><input checked="" disabled="" type="checkbox"> 封面图，想要pv3那张兔特拥抱，但是没找到原图</li>
-<li><input checked="" disabled="" type="checkbox"> about页面，还没有更新个人信息</li>
-<li><input checked="" disabled="" type="checkbox"> 博客加密和字数统计好像冲突了</li>
-<li><input disabled="" type="checkbox"> 显示博客的更新时间，这个好复杂</li>
-<li><input checked="" disabled="" type="checkbox"> 评论功能的实现好复杂，暂时没有计划</li>
-</ul>
-<h2 id="补档相关"><a href="#补档相关" class="headerlink" title="补档相关"></a>补档相关</h2><ul>
-<li><input checked="" disabled="" type="checkbox"> 一些以前的同人文还没全部放上来</li>
-<li><input checked="" disabled="" type="checkbox"> 部分同人文之间要加链接</li>
-<li><input checked="" disabled="" type="checkbox"> 词云的整理和最后生成的图片也可以放上来</li>
-<li><input checked="" disabled="" type="checkbox"> 好崩溃，我《玫瑰庭院》那篇怎么消失了</li>
-</ul>
-<h2 id="后续相关"><a href="#后续相关" class="headerlink" title="后续相关"></a>后续相关</h2><ul>
-<li><input disabled="" type="checkbox"> 继续重读文本并做笔记</li>
+<h3 id="Leancloud"><a href="#Leancloud" class="headerlink" title="Leancloud"></a>Leancloud</h3><ol>
+<li><p>注册 <a target="_blank" rel="noopener" href="https://www.leancloud.cn/">Leancloud</a> 可以同时实现基于 <a target="_blank" rel="noopener" href="https://valine.js.org/configuration.html">Valine</a> 的评论和网页访问统计功能（据说注册国际版更好）</p>
+</li>
+<li><p>创建应用之后打开<code>设置-应用凭证</code>，得到<code>AppID</code> <code>AppKey</code> 和 <code>REST API 服务器地址</code>用于后续设置</p>
+</li>
+<li><p>打开<code>数据存储-结构化数据-Comment</code>可以管理评论</p>
+</li>
+</ol>
+<h1 id="TO-DO"><a href="#TO-DO" class="headerlink" title="TO DO"></a>TO DO</h1><ul>
+<li><input checked="" disabled="" type="checkbox"> 更新封面图</li>
+<li><input checked="" disabled="" type="checkbox"> 更新about页面</li>
+<li><input disabled="" type="checkbox"> 尝试外部<code>js</code>或者<code>css</code>脚本美化</li>
 </ul>
 
                 
